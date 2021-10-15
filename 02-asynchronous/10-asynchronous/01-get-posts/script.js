@@ -13,10 +13,15 @@
 
     document.querySelector("#run").addEventListener("click", () => {
 
-        window.lib.getPosts( 
+        window.lib.getPosts((error, posts) => {
             // Your code here
+            let message;
+            if (error) { message = error }
+            else { message = posts }
+            console.log(message);
+        }
             
         );
-        
+    
     });
-})();
+}) ();
