@@ -10,9 +10,16 @@
 // You will have time to focus on it later.
 
 (() => {
-    // click 
+    document.querySelector("#run").addEventListener("click", () => {
+    // click  
+    new Promise(resolve, article => {
+            resolve('')
+
+        })
     window.lib.getPosts().then(
             // Your code here
-        )
+       
+    )
+        });
     
 })();
