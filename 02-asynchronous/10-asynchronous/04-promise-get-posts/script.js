@@ -12,14 +12,10 @@
 (() => {
     document.querySelector("#run").addEventListener("click", () => {
     // click  
-    new Promise(resolve, article => {
-            resolve('')
-
-        })
-    window.lib.getPosts().then(
+        window.lib.getPosts().then((item) => {
+            console.log(item);
+    }
             // Your code here
-       
-    )
-        });
+    )});
     
 })();
