@@ -12,8 +12,8 @@
 (() => {
     document.querySelector("#run").addEventListener("click", () => {
     // click  
-        window.lib.getPosts().then((item) => {
-            console.log(item);
+        window.lib.getPosts().then((resolve) => {
+            console.log(resolve);
     }
             // Your code here
     )});

@@ -10,5 +10,17 @@
 // You will have time to focus on it later.
 
 (() => {
+    document.querySelector("#run").addEventListener("click", async() => {
     // your code here
+        try {
+            const people = await window.lib.getPosts();
+            for (let post of posts) {
+                post.comments = await window.lib.getComments()
+            }
+            console.log(posts);
+    }
+        
+        
+        });
+
 })();
