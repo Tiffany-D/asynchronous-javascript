@@ -18,6 +18,24 @@
         const response = await fetch("http://localhost:3000/heroes");
 
         // your code here
-        
+        //1. Convert the response to json format - we need the content of the fecth function (API).
+         let responseJson = await response.json()
+
+
+        for(element of responseJson){
+            let tplImport = document.importNode(tpl.content, true)
+
+
+            // Select class attributes from the template tag.
+            let name = tplImport.querySelector(".name")
+            let alterEgo = tplImport.querySelector(".alter-ego")
+            let powers = tplImport.querySelector(".powers")
+
+            name.textContent = element.name
+            alterEgo.textContent = element.alterEgo
+            powers.textContent = element.abilities
+
+            target.appendChild(tplImport)
+        }
     });
 })();

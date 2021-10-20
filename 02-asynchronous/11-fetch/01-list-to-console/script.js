@@ -12,13 +12,17 @@
 (() => {
     document.querySelector("#run").addEventListener("click", async () => {
         const response = await fetch("http://localhost:3000/heroes");
-
         // Steps :
         // 1. read the Fetch documentation
         // 2. you must convert the response in a json format
+        const marvel = await response.json();
         // 3. display the response in the console
+        console.log(marvel);
         // NB: here we use an async await function, you can convert it 
         //     in a Promise or callbacks functions if you prefer 
+
+   
+        }
         
-    });
+    );
 })();
