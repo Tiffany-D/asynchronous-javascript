@@ -22,7 +22,9 @@
          let responseJson = await response.json()
 
 
-        for(element of responseJson){
+        for (element of responseJson) {
+            //2. import node from another document. If 2nd parameter set to 'true', all descendants
+            // will be imported
             let tplImport = document.importNode(tpl.content, true)
 
 
@@ -31,6 +33,7 @@
             let alterEgo = tplImport.querySelector(".alter-ego")
             let powers = tplImport.querySelector(".powers")
 
+            // 3. Return or set the text from the selected element.
             name.textContent = element.name
             alterEgo.textContent = element.alterEgo
             powers.textContent = element.abilities
