@@ -21,10 +21,11 @@
         //1. Convert the response to json format - we need the content of the fecth function (API).
          let responseJson = await response.json()
 
-
+        // 2. Loop through the values of the element variable.
         for (element of responseJson) {
-            //2. import node from another document. If 2nd parameter set to 'true', all descendants
-            // will be imported
+
+            
+        //3. import node from another document. If 2nd parameter set to 'true', all descendants will be imported
             let tplImport = document.importNode(tpl.content, true)
 
 
@@ -38,6 +39,7 @@
             alterEgo.textContent = element.alterEgo
             powers.textContent = element.abilities
 
+            //4. return the text from the tplImport variable and append the node.
             target.appendChild(tplImport)
         }
     });
